@@ -69,6 +69,6 @@ class PhrasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def phrase_params
-      params.require(:phrase).permit(:words, :phrases, :recordings)
+      params.require(:phrase).permit(:english, :spanish, :mp3)
     end
 end

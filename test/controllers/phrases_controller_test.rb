@@ -17,7 +17,7 @@ class PhrasesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create phrase" do
     assert_difference('Phrase.count') do
-      post phrases_url, params: { phrase: { phrases: @phrase.phrases, recordings: @phrase.recordings, words: @phrase.words } }
+      post phrases_url, params: { phrase: { english: @phrase.english, mp3: @phrase.mp3, spanish: @phrase.spanish } }
     end
 
     assert_redirected_to phrase_url(Phrase.last)
@@ -34,7 +34,7 @@ class PhrasesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update phrase" do
-    patch phrase_url(@phrase), params: { phrase: { phrases: @phrase.phrases, recordings: @phrase.recordings, words: @phrase.words } }
+    patch phrase_url(@phrase), params: { phrase: { english: @phrase.english, mp3: @phrase.mp3, spanish: @phrase.spanish } }
     assert_redirected_to phrase_url(@phrase)
   end
 

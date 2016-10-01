@@ -10,6 +10,7 @@ class PhrasesController < ApplicationController
   # GET /phrases/1
   # GET /phrases/1.json
   def show
+    @mp3 = Phrase.find_by_id(params[:phrase_id]) 
   end
 
   # GET /phrases/new

@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<p id="notice"><%= notice %></p>
 
 <p>
   <strong>English:</strong>
@@ -15,5 +16,15 @@
   <%= @phrase.mp3 %>
 </p>
 
+
+
+<audio src="<%= audio_path 'Phrases/003.mp3'%>" type="audio/mpeg" controls>
+
+
+    Your browser does not support the audio element.
+</audio>
+
 <%= link_to 'Edit', edit_phrase_path(@phrase) %> |
 <%= link_to 'Back', phrases_path %>
+
+</div>

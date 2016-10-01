@@ -54,5 +54,7 @@ gem 'autoprefixer-rails'
 
 gem 'roo'
 
+gem 'pry'
+
 
 gem 'rack-utf8_sanitizer'

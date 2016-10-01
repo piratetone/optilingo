@@ -1,0 +1,32 @@
+<%= form_for(phrase) do |f| %>
+  <% if phrase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(phrase.errors.count, "error") %> prohibited this phrase from being saved:</h2>
+
+      <ul>
+      <% phrase.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :english %>
+    <%= f.text_area :english %>
+  </div>
+
+  <div class="field">
+    <%= f.label :spanish %>
+    <%= f.text_area :spanish %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mp3 %>
+    <%= f.text_field :mp3 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

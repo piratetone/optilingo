@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :words
   resources :phrases
   root 'phrases#index'
 

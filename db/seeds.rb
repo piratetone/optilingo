@@ -42,3 +42,16 @@ csv.each do |row|
 end
 
 puts "There are now #{Phrase.count} rows in the phrases table"
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'spanish-words.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+  t = Word.new
+  t.english = row['English']
+  t.spanish = row['Spanish']
+  t.mp3 = row['MP3']
+  t.save
+  puts "#{t.english}, #{t.spanish} saved"
+end
+
+puts "There are now #{Word.count} rows in the words table"
